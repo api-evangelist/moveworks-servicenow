@@ -1,0 +1,53 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/moveworks-servicenow-data-api-openapi.yml
+entities:
+- name: Conversation
+  operation: listConversations
+  description: Top-level interaction grouping between a user and the AI Assistant.
+  relationships:
+    - type: has_many
+      target: Interaction
+      via: conversation_id
+    - type: belongs_to
+      target: User
+      via: user
+- name: Interaction
+  operation: listInteractions
+  description: An individual user / AI Assistant exchange (utterance, button click, link click, form submission).
+  relationships:
+    - type: belongs_to
+      target: Conversation
+      via: conversation_id
+    - type: has_many
+      target: PluginCall
+      via: interaction_id
+- name: PluginCall
+  operation: listPluginCalls
+  description: A plugin invocation produced while resolving an interaction.
+  relationships:
+    - type: belongs_to
+      target: Interaction
+      via: interaction_id
+    - type: has_many
+      target: PluginResource
+      via: plugin_call_id
+- name: PluginResource
+  operation: listPluginResources
+  description: A resource used by a plugin during an interaction.
+  relationships:
+    - type: belongs_to
+      target: PluginCall
+      via: plugin_call_id
+- name: User
+  operation: listUsers
+  description: Ingested user roster record referenced by conversations and interactions.
+  relationships:
+    - type: has_many
+      target: Conversation
+      via: user
+notes: >-
+  Relationship field names (conversation_id, interaction_id, plugin_call_id, user)
+  are inferred from the documented Data API record hierarchy (conversations >
+  interactions > plugin-calls > plugin-resources, plus users). The public docs do
+  not publish exact join-key field names; treat via-fields as derived placeholders.

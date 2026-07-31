@@ -1,0 +1,14 @@
+{
+  "provider": "moveworks-servicenow",
+  "sources": [
+    "moveworks-servicenow-records-api-openapi.yml"
+  ],
+  "outputs": [
+    "moveworks-servicenow-records-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

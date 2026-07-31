@@ -1,0 +1,30 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.moveworks.com/ai-assistant/getting-started/roadmap-release-notes/release-notes-2026.md
+scheme: dated-release-notes
+current_version: Data API v1
+locations:
+  - https://docs.moveworks.com/ai-assistant/getting-started/roadmap-release-notes/release-notes-2026.md
+  - https://help.moveworks.com/docs/release-notes-2025
+  - https://help.moveworks.com/docs/release-notes-2024
+  - https://help.moveworks.com/docs/release-notes-2023
+  - https://community.moveworks.com/product-updates
+entries:
+- date: '2025'
+  highlights:
+    - Data API graduated to V1 (Beta2/Beta1 users must migrate).
+    - API Playground added to Moveworks Setup — a sandbox to test and validate external-system API requests without affecting live data.
+    - Slack token management consolidated to the Slack Connector screen.
+  breaking: false
+- date: '2024'
+  highlights:
+    - API action query timeout limit increased to 1 minute.
+    - Developers can monitor bot API requests/responses via Creator Studio logs for troubleshooting.
+  breaking: false
+- date: '2023'
+  highlights:
+    - Moveworks User Attributes and Custom Attributes usable when configuring API Actions (e.g. Workday ID in a PTO approval API).
+  breaking: false
+notes: >-
+  Moveworks maintains year-partitioned release notes plus a community product-updates
+  feed. Entries above are a recent-window capture of API-relevant changes, not full history.

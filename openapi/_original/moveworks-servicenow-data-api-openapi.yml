@@ -1,0 +1,168 @@
+openapi: 3.0.3
+x-apievangelist-generated: '2026-07-20'
+x-apievangelist-method: generated
+x-apievangelist-source: https://docs.moveworks.com/ai-assistant/data-api
+info:
+  title: Moveworks Data API
+  version: v1
+  description: >-
+    The Moveworks Data API lets customers export AI Assistant conversation and
+    interaction data through a read-only REST API. It exposes every interaction —
+    user utterances, button clicks, link clicks, and UI form submissions — as
+    OData JSON record collections. This specification is a faithful capture of the
+    endpoints, methods, host, authentication, and response envelope documented at
+    docs.moveworks.com; it is not an official Moveworks-published OpenAPI.
+  contact:
+    name: Moveworks Developer Documentation
+    url: https://docs.moveworks.com/
+servers:
+  - url: https://api.moveworks.ai/export/v1
+    description: US Production
+  - url: https://api.am-eu-central.moveworks.ai/export/v1
+    description: EU Production
+  - url: https://api.am-ca-central.moveworks.ai/export/v1
+    description: CA Production
+  - url: https://api.moveworksgov.ai/export/v1
+    description: GovCloud
+security:
+  - bearerAuth: []
+tags:
+  - name: Records
+    description: Exported AI Assistant interaction records
+paths:
+  /records/conversations:
+    get:
+      operationId: listConversations
+      tags: [Records]
+      summary: List conversation records
+      description: Returns top-level interaction groupings (conversations) between users and the AI Assistant.
+      parameters:
+        - $ref: '#/components/parameters/count'
+        - $ref: '#/components/parameters/nextLink'
+      responses:
+        '200':
+          description: An OData collection of conversation records.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/RecordCollection' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '410': { $ref: '#/components/responses/Gone' }
+  /records/interactions:
+    get:
+      operationId: listInteractions
+      tags: [Records]
+      summary: List interaction records
+      description: Returns individual user and AI Assistant exchanges within conversations.
+      parameters:
+        - $ref: '#/components/parameters/count'
+        - $ref: '#/components/parameters/nextLink'
+      responses:
+        '200':
+          description: An OData collection of interaction records.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/RecordCollection' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '410': { $ref: '#/components/responses/Gone' }
+  /records/plugin-calls:
+    get:
+      operationId: listPluginCalls
+      tags: [Records]
+      summary: List plugin call records
+      description: Returns plugin invocation records produced while resolving interactions.
+      parameters:
+        - $ref: '#/components/parameters/count'
+        - $ref: '#/components/parameters/nextLink'
+      responses:
+        '200':
+          description: An OData collection of plugin call records.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/RecordCollection' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '410': { $ref: '#/components/responses/Gone' }
+  /records/plugin-resources:
+    get:
+      operationId: listPluginResources
+      tags: [Records]
+      summary: List plugin resource records
+      description: Returns the resources used by plugins during interactions.
+      parameters:
+        - $ref: '#/components/parameters/count'
+        - $ref: '#/components/parameters/nextLink'
+      responses:
+        '200':
+          description: An OData collection of plugin resource records.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/RecordCollection' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '410': { $ref: '#/components/responses/Gone' }
+  /records/users:
+    get:
+      operationId: listUsers
+      tags: [Records]
+      summary: List user records
+      description: Returns the ingested user roster data referenced by interactions.
+      parameters:
+        - $ref: '#/components/parameters/count'
+        - $ref: '#/components/parameters/nextLink'
+      responses:
+        '200':
+          description: An OData collection of user records.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/RecordCollection' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '410': { $ref: '#/components/responses/Gone' }
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      description: >-
+        Bearer token authentication. Supply an API key, or an OAuth 2.0 client-credentials
+        access token, in the Authorization header as `Authorization: Bearer <token>`.
+  parameters:
+    count:
+      name: $count
+      in: query
+      required: false
+      description: When true, include the total record count in the response.
+      schema: { type: boolean }
+    nextLink:
+      name: '@odata.nextLink'
+      in: query
+      required: false
+      description: Opaque cursor returned by a previous page for server-driven pagination.
+      schema: { type: string }
+  responses:
+    Unauthorized:
+      description: Missing or invalid credentials.
+      content:
+        application/json:
+          schema: { $ref: '#/components/schemas/Error' }
+    Gone:
+      description: The requested API version has been deprecated and sunset (RFC-style 410 Gone).
+      content:
+        application/json:
+          schema: { $ref: '#/components/schemas/Error' }
+  schemas:
+    RecordCollection:
+      type: object
+      description: OData JSON collection envelope.
+      properties:
+        'odata.context': { type: string }
+        'odata.nextlink': { type: string, description: Cursor to the next page, absent on the last page. }
+        value:
+          type: array
+          items: { type: object, additionalProperties: true }
+    Error:
+      type: object
+      description: Standard Moveworks error envelope.
+      properties:
+        error:
+          type: object
+          properties:
+            code: { type: string, description: Stable error code identifier. }
+            message: { type: string, description: Human-readable error description. }

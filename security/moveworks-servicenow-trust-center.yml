@@ -1,0 +1,29 @@
+generated: '2026-07-20'
+method: searched
+source: https://www.moveworks.com/us/en/platform/security
+url: https://www.moveworks.com/us/en/platform/security
+certifications:
+- SOC 2 Type 2
+- ISO 27001
+- HIPAA
+- GDPR
+- FedRAMP
+evidence:
+- source: https://www.moveworks.com/us/en/resources/blog/moveworks-soc-2-type-2-compliance
+  kind: certification-announcement
+  certification: SOC 2 Type 2
+- source: https://www.moveworks.com/us/en/resources/blog/moveworks-iso-27001-certification
+  kind: certification-announcement
+  certification: ISO 27001
+- source: https://www.moveworks.com/content/dam/pdfs/trust/moveworks-iso-27001.pdf
+  kind: certificate-pdf
+  certification: ISO 27001
+- source: https://www.moveworks.com/us/en/platform/security
+  kind: security-platform-page
+  keywords: [soc 2, iso 27001, hipaa, gdpr, fedramp, encryption, penetration testing]
+notes: >-
+  Moveworks does not host a dedicated trust.moveworks.com subdomain (probed:
+  no resolution). Its security/compliance posture is published on the platform
+  security page and dedicated certification pages/PDFs. Sensitive data is
+  encrypted in transit and at rest with rotated keys; biannual third-party
+  penetration tests and vulnerability scans are conducted.

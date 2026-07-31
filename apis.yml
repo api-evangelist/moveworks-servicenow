@@ -1,9 +1,30 @@
 aid: moveworks-servicenow
 name: Moveworks (ServiceNow)
-description: 'Moveworks (ServiceNow) is a company surfaced as a portfolio company of bain-capital-ventures
-  and added to the API Evangelist network as a stub for enrichment. Sector: ai-infrastructure. This profile
-  is a lead awaiting the enrichment pipeline.'
+description: >-
+  Moveworks is an enterprise AI assistant / agentic automation platform (acquired by
+  ServiceNow) that lets employees resolve IT, HR, and other requests in natural language
+  across Slack, Microsoft Teams, and 100+ enterprise systems. Its developer platform —
+  Agent Studio, Creator Studio, and the AI Agent Marketplace — lets teams build and deploy
+  plugins with triggers, slots, and actions, and connect to systems such as ServiceNow,
+  Jira, Workday, and Salesforce. Moveworks exposes Bearer-authenticated REST APIs including
+  a read-only OData Data API for exporting conversation and interaction data, an Events API,
+  a Conversations API, webhook listeners, and customer-hosted gateways, plus an official
+  hosted MCP server for its documentation. Surfaced originally as a Bain Capital Ventures
+  portfolio company and enriched from Moveworks' public developer documentation.
 url: https://raw.githubusercontent.com/api-evangelist/moveworks-servicenow/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://github.com/moveworks.png
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -12,16 +33,115 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
 - Ai Infrastructure
-apis: []
+- AI Assistant
+- Agentic AI
+- Enterprise Automation
+- ITSM
+- Conversational AI
+- Developer Platform
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+apis:
+- aid: moveworks-servicenow:moveworks-servicenow-records-api
+  name: Moveworks (ServiceNow) Records API
+  description: Exported AI Assistant interaction records
+  humanURL: https://docs.moveworks.com/ai-assistant/data-api
+  baseURL: https://api.moveworks.ai/export/v1
+  tags:
+  - Records
+  properties:
+  - type: OpenAPI
+    url: openapi/moveworks-servicenow-records-api-openapi.yml
+  - type: Documentation
+    url: https://docs.moveworks.com/api-reference/overview
 common:
+- type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/moveworks-servicenow/overview
+# --- Developer surface / link properties ---
 - type: Website
   url: https://www.moveworks.com/
+- type: DeveloperPortal
+  url: https://developer.moveworks.com/
+- type: Documentation
+  url: https://docs.moveworks.com/
+- type: APIReference
+  url: https://docs.moveworks.com/api-reference/overview
+- type: GettingStarted
+  url: https://docs.moveworks.com/ai-assistant/getting-started/welcome-to-moveworks
+- type: HelpCenter
+  url: https://help.moveworks.com/
+- type: Support
+  url: https://community.moveworks.com/
+- type: Blog
+  url: https://www.moveworks.com/us/en/resources/blog
+- type: GitHubOrganization
+  url: https://github.com/moveworks
+- type: Roadmap
+  url: https://docs.moveworks.com/ai-assistant/getting-started/roadmap-release-notes
+- type: Pricing
+  url: https://www.moveworks.com/us/en/pricing
+- type: SignUp
+  url: https://developer.moveworks.com/
+- type: TermsOfService
+  url: https://www.moveworks.com/us/en/legal/terms-conditions
+- type: PrivacyPolicy
+  url: https://www.moveworks.com/us/en/legal/privacy-policy
+# --- Operational transparency ---
+- type: StatusPage
+  url: https://status.moveworks.com
+- type: ChangeLog
+  url: changelog/moveworks-servicenow-changelog.yml
+- type: Lifecycle
+  url: lifecycle/moveworks-servicenow-lifecycle.yml
+- type: Deprecation
+  url: https://help.moveworks.com/docs/api-versioning-policy
+- type: Webhooks
+  url: asyncapi/moveworks-servicenow-webhooks.yml
+# --- Auth / security ---
+- type: Authentication
+  url: authentication/moveworks-servicenow-authentication.yml
+- type: DomainSecurity
+  url: security/moveworks-servicenow-domain-security.yml
+- type: VulnerabilityDisclosure
+  url: security/moveworks-servicenow-vulnerability-disclosure.yml
+- type: Security
+  url: https://www.moveworks.com/us/en/platform/security
+- type: TrustCenter
+  url: security/moveworks-servicenow-trust-center.yml
+- type: Compliance
+  url: https://www.moveworks.com/us/en/platform/security
+- type: Conformance
+  url: conformance/moveworks-servicenow-conformance.yml
+# --- Agent-readiness / runtime semantics ---
+- type: MCPServer
+  url: mcp/moveworks-servicenow-mcp.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: AgenticAccess
+  url: agentic-access/moveworks-servicenow-agentic-access.yml
+- type: LLMsTxt
+  url: llms/moveworks-servicenow-llms.txt
+- type: WellKnown
+  url: well-known/moveworks-servicenow-well-known.yml
+- type: Conventions
+  url: conventions/moveworks-servicenow-conventions.yml
+- type: ErrorCatalog
+  url: errors/moveworks-servicenow-problem-types.yml
+- type: DataModel
+  url: data-model/moveworks-servicenow-data-model.yml
+- type: Sandbox
+  url: sandbox/moveworks-servicenow-sandbox.yml
+- type: Packages
+  url: packages/moveworks-servicenow-packages.yml
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 20
+  pass: local-v1

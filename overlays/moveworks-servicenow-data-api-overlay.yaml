@@ -1,0 +1,25 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Moveworks Data API
+  version: 1.0.0
+extends: openapi/moveworks-servicenow-data-api-openapi.yml
+actions:
+- target: $.info
+  update:
+    x-apievangelist-rating: 3
+    x-apievangelist-notes: >-
+      Faithful capture of the documented read-only Data API. Enhancements below
+      annotate the record hierarchy, retention window, and pagination convention.
+- target: $.info
+  update:
+    x-data-retention-days: 30
+    x-data-latency-sla-hours: 24
+- target: $.paths['/records/conversations'].get
+  update:
+    x-record-hierarchy: root
+- target: $.paths['/records/interactions'].get
+  update:
+    x-record-hierarchy: child-of-conversations
+- target: $.components.schemas.RecordCollection
+  update:
+    x-pagination: Follow odata.nextlink until absent for server-driven paging.

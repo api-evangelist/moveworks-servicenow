@@ -1,0 +1,23 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.moveworks.com/service-management/moveworks-setup/api-playground
+sandbox:
+  name: API Playground
+  description: >-
+    A tool in Moveworks Setup for testing and validating API requests. It functions
+    as a sandbox environment where you can interact with external-system APIs
+    without affecting live data. Added in 2025.
+  docs:
+    - https://docs.moveworks.com/service-management/moveworks-setup/api-playground
+    - https://help.moveworks.com/docs/api-playground
+  credentials:
+    - type: API Key
+      note: Created in the dashboard under HTTP Connectors > Credentials; validated via the Test Auth endpoint.
+    - type: OAuth 2.0 Client Credentials
+      note: Client ID + Secret exchanged at the OAuth token endpoint for a 60-second access token.
+test_values: []
+notes: >-
+  Moveworks does not publish magic test identifiers or test card/token fixtures
+  (it is an enterprise AI assistant platform, not a payments API). Its sandbox is
+  the API Playground, which safely exercises configured external-system APIs
+  without touching live data. No test values are invented here.

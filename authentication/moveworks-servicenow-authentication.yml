@@ -1,0 +1,42 @@
+generated: '2026-07-20'
+method: searched
+source: openapi/moveworks-servicenow-data-api-openapi.yml
+docs: https://docs.moveworks.com/api-reference/api-credentials
+summary:
+  types:
+  - http
+  - oauth2
+  api_key_in:
+  - header
+  oauth2_flows:
+  - clientCredentials
+notes: >-
+  Moveworks REST APIs use Bearer token authentication — the token is sent as
+  `Authorization: Bearer <token>`. Credentials are created in the Moveworks
+  dashboard under HTTP Connectors > Credentials. Two credential types are offered:
+  OAuth 2.0 with Client Credentials (recommended; access tokens generated via the
+  OAuth token endpoint) and long-lived API Keys (validated via the Test Auth
+  endpoint). Client IDs, Client Secrets and API Keys never expire; OAuth access
+  tokens expire after 60 seconds. Credentials are shown in plaintext once at
+  creation and stored only as a hash. Moveworks recommends generating API keys
+  against a dedicated service account rather than an individual user account.
+schemes:
+- name: bearerAuth
+  type: http
+  scheme: bearer
+  description: >-
+    Bearer token authentication. Supply a long-lived API key, or a short-lived
+    OAuth 2.0 client-credentials access token, in the Authorization header as
+    `Authorization: Bearer <token>`.
+  sources:
+  - openapi/moveworks-servicenow-data-api-openapi.yml
+- name: oauth2ClientCredentials
+  type: oauth2
+  flow: clientCredentials
+  description: >-
+    OAuth 2.0 client-credentials grant (recommended). A Client ID + Client Secret
+    created in the Moveworks dashboard are exchanged at the OAuth token endpoint
+    for a 60-second access token, then presented as a Bearer token.
+  token_lifetime_seconds: 60
+  sources:
+  - https://docs.moveworks.com/api-reference/api-credentials

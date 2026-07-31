@@ -1,0 +1,40 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/moveworks
+notes: >-
+  Moveworks does not publish a general-purpose API client SDK on npm, PyPI, Maven,
+  NuGet, RubyGems, Packagist, or crates.io (npm/PyPI searches returned no official
+  package as of 2026-07-20). Its public GitHub org ships example integrations,
+  reference implementations, and an MCP proxy client rather than versioned client
+  libraries. These are catalogued below as first-party source packages.
+packages:
+- language: typescript
+  registry: github
+  name: moveworks/Moveworks-MCP-Proxy-Client
+  url: https://github.com/moveworks/Moveworks-MCP-Proxy-Client
+  install: git clone https://github.com/moveworks/Moveworks-MCP-Proxy-Client
+  official: true
+  description: Proxy client for connecting to Moveworks MCP plugins.
+- language: python
+  registry: github
+  name: moveworks/data-api
+  url: https://github.com/moveworks/data-api
+  install: git clone https://github.com/moveworks/data-api
+  official: true
+  license: Apache-2.0
+  description: Example code + PowerBI template for building integrations on the Data API.
+- language: python
+  registry: github
+  name: moveworks/gateway
+  url: https://github.com/moveworks/gateway
+  install: git clone https://github.com/moveworks/gateway
+  official: true
+  license: MIT
+  description: Ready-to-run Flask server implementing the Content Gateway protocol.
+- language: shell
+  registry: github
+  name: moveworks/moveworks-agent
+  url: https://github.com/moveworks/moveworks-agent
+  install: git clone https://github.com/moveworks/moveworks-agent
+  official: true
+  description: Installation for the Moveworks Agent.

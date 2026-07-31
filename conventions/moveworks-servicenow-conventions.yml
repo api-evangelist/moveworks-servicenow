@@ -1,0 +1,50 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.moveworks.com/api-reference/overview
+authentication:
+  style: bearer-token
+  detail: Authorization header, Bearer API key or 60-second OAuth 2.0 client-credentials access token.
+  ref: authentication/moveworks-servicenow-authentication.yml
+idempotency:
+  supported: false
+  notes: >-
+    The public Data API is read-only (GET), so idempotency keys are not applicable
+    or documented. No Idempotency-Key header is published for the write surfaces
+    (which are configured through the dashboard/Agent Studio rather than direct REST).
+pagination:
+  style: cursor
+  mechanism: OData server-driven paging
+  response_fields:
+    - odata.nextlink
+    - odata.context
+    - value
+  query_params:
+    - $count
+  notes: Follow the `odata.nextlink` cursor until it is absent to page a full result set.
+versioning:
+  style: uri-path-maturity
+  values: [v1alpha1, v1beta1, v1]
+  ref: lifecycle/moveworks-servicenow-lifecycle.yml
+error_envelope:
+  shape: '{ "error": { "code": "...", "message": "..." } }'
+  format: custom
+  ref: errors/moveworks-servicenow-problem-types.yml
+rate_limiting:
+  documented: true
+  detail: >-
+    API requests are rate limited to ensure platform stability; increases are
+    granted via support. Query timeout limit for API actions raised to 1 minute (2024).
+  signaling: HTTP 429 on limit; specific header names not published.
+data_format:
+  media_type: application/json
+  model: OData JSON records (strings, nested string maps, string arrays; null for missing data)
+retention:
+  data_api_ttl_days: 30
+  data_api_latency_sla_hours: 24
+hosts:
+  us: https://api.moveworks.ai
+  eu: https://api.am-eu-central.moveworks.ai
+  ca: https://api.am-ca-central.moveworks.ai
+  gov: https://api.moveworksgov.ai
+  jp: https://api.jp.moveworks.com
+  uk: https://api.uk.moveworks.com

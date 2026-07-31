@@ -1,0 +1,28 @@
+generated: '2026-07-20'
+method: searched
+status: published
+source: https://docs.moveworks.com/llms.txt
+server:
+  name: moveworks-docs
+  transport: http
+  url: https://docs.moveworks.com/_mcp/server
+  server_info:
+    name: fern-docs-mcp-server
+    version: 1.0.0
+  protocol_version: 2024-11-05
+description: >-
+  Moveworks publishes an official hosted MCP server for its developer documentation
+  (a Fern-hosted docs MCP server) advertised in docs.moveworks.com/llms.txt for AI
+  clients such as Claude Code and Cursor. It exposes a documentation-search tool over
+  the streamable-HTTP transport. Verified live on 2026-07-20 via an MCP initialize +
+  tools/list handshake. Separately, Moveworks ships an open-source
+  Moveworks-MCP-Proxy-Client (TypeScript) on GitHub for connecting to Moveworks MCP
+  plugins; the Moveworks AI Assistant platform itself also acts as an MCP host/plugin
+  surface. This artifact documents the hosted docs MCP server.
+tools:
+- name: searchDocs
+  description: Search the documentation at https://docs.moveworks.com and return relevant doc passages.
+related:
+  - name: Moveworks-MCP-Proxy-Client
+    url: https://github.com/moveworks/Moveworks-MCP-Proxy-Client
+    description: Open-source proxy client for connecting to Moveworks MCP plugins (TypeScript).

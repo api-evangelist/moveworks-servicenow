@@ -1,0 +1,141 @@
+<!-- generated: 2026-07-20 | method: searched | source: https://docs.moveworks.com/llms.txt (saved verbatim) -->
+# Build with Moveworks
+
+> The developer platform for AI that gets work done.
+
+<h1>
+  Build with Moveworks.
+</h1>
+
+<p>
+  The developer platform for AI that gets work done. Build and deploy plugins, connect to 100+ enterprise systems, and automate workflows at
+  scale.
+</p>
+
+You
+
+<circle cx="336" cy="126" r="2.5" fill="#FFD468" opacity="0.7" />
+
+<circle cx="364" cy="112" r="2.5" fill="#A0A6FF" opacity="0.7" />
+
+<circle cx="380" cy="153" r="2.5" fill="#C6F2D5" opacity="0.7" />
+
+<circle cx="387" cy="221" r="2.5" fill="#FF8668" opacity="0.7" />
+
+<circle cx="380" cy="283" r="2.5" fill="#FFD468" opacity="0.7" />
+
+<circle cx="364" cy="329" r="2.5" fill="#A0A6FF" opacity="0.7" />
+
+<circle cx="336" cy="370" r="2.5" fill="#C6F2D5" opacity="0.7" />
+
+<circle cx="298" cy="390" r="2.5" fill="#FF8668" opacity="0.7" />
+
+<rect x="193" y="219" width="6" height="10" rx="2" fill="#FFFFFF" />
+
+<rect x="217" y="219" width="6" height="10" rx="2" fill="#FFFFFF" />
+
+Assistant
+
+<g transform="translate(433, 33) scale(0.85)">
+  <path d="M5.4 15.2c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2h2v2zm1 0c0-1.1.9-2 2-2s2 .9 2 2v5c0 1.1-.9 2-2 2s-2-.9-2-2v-5z" fill="#E01E5A" />
+
+  <path d="M8.4 5.2c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2v2h-2zm0 1c1.1 0 2 .9 2 2s-.9 2-2 2h-5c-1.1 0-2-.9-2-2s.9-2 2-2h5z" fill="#36C5F0" />
+
+  <path d="M18.4 8.2c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2h-2v-2zm-1 0c0 1.1-.9 2-2 2s-2-.9-2-2v-5c0-1.1.9-2 2-2s2 .9 2 2v5z" fill="#2EB67D" />
+
+  <path d="M15.4 18.2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2v-2h2zm0-1c-1.1 0-2-.9-2-2s.9-2 2-2h5c1.1 0 2 .9 2 2s-.9 2-2 2h-5z" fill="#ECB22E" />
+</g>
+
+Slack
+
+ServiceNow
+
+<path fill="#0F2E66" d="M227.38 286.43h-20.95c-3.14 0-5.73-1.44-6.58-4.9l-25.24-88.88-25.24 88.91c-.85 3.46-3.44 4.9-6.58 4.9h-20.95c-3.44 0-5.46-1.44-6.58-4.9-13.52-37.5-22.68-74.76-30.43-112.26-.85-3.77.85-6.36 4.85-6.36h18.66c3.44 0 5.73 1.73 6.33 4.9 4.85 26.57 10.62 53.94 18.37 80.82l22.37-80.82c.85-3.17 3.14-4.9 6.58-4.9h25.24c3.44 0 5.73 1.73 6.58 4.9l22.37 80.82c7.75-26.81 13.52-54.26 18.37-80.82.56-3.17 2.87-4.9 6.33-4.9h18.66c4 0 5.73 2.6 4.85 6.36-7.75 37.5-16.91 74.76-30.41 112.26-1.17 3.46-3.14 4.9-6.58 4.9" />
+
+<path fill="#FC5B05" d="M128.46 100.47c12.33-12.35 28.72-19.13 46.17-19.16 17.43 0 33.8 6.78 46.1 19.09 6.4 6.4 11.3 13.9 14.53 22.05a4.94 4.94 0 0 0 4.6 3.12h19.72c3.3 0 5.73-3.17 4.78-6.31-4.4-14.6-12.35-27.96-23.42-39.05-17.72-17.67-41.25-27.44-66.29-27.44-25.08 0-48.64 9.77-66.36 27.51-11.09 11.09-19.02 24.46-23.4 39.01-.94 3.14 1.48 6.31 4.78 6.31h19.72c2.02 0 3.86-1.24 4.6-3.12 3.21-8.15 8.08-15.63 14.46-22.01Z" />
+
+Workday
+
+<path fill="#2684FF" d="M11.571 11.513H0a5.218 5.218 0 0 0 5.232 5.215h2.13v2.057A5.215 5.215 0 0 0 12.575 24V12.518a1.005 1.005 0 0 0-1.005-1.005zm5.723-5.756H5.736a5.215 5.215 0 0 0 5.215 5.214h2.129v2.058a5.218 5.218 0 0 0 5.215 5.214V6.758a1.001 1.001 0 0 0-1.001-1.001zM23.013 0H11.455a5.215 5.215 0 0 0 5.215 5.215h2.129v2.057A5.215 5.215 0 0 0 24 12.483V1.005A1.001 1.001 0 0 0 23.013 0Z" />
+
+Jira
+
+<path fill="#00A1E0" d="M10.006 5.415a4.195 4.195 0 013.045-1.306c1.56 0 2.954.9 3.69 2.205.63-.3 1.35-.45 2.1-.45 2.85 0 5.159 2.34 5.159 5.22s-2.31 5.22-5.176 5.22c-.345 0-.69-.044-1.02-.104a3.75 3.75 0 01-3.3 1.95c-.6 0-1.155-.15-1.65-.375A4.314 4.314 0 018.88 20.4a4.302 4.302 0 01-4.05-2.82c-.27.062-.54.076-.825.076-2.204 0-4.005-1.8-4.005-4.05 0-1.5.811-2.805 2.01-3.51-.255-.57-.39-1.2-.39-1.846 0-2.58 2.1-4.65 4.65-4.65 1.53 0 2.85.705 3.72 1.8" />
+
+Salesforce
+
+SAP
+
+SAP
+
+<g transform="translate(434, 384)">
+  <rect x="0" y="0" width="8" height="8" fill="#F25022" />
+
+  <rect x="9" y="0" width="8" height="8" fill="#7FBA00" />
+
+  <rect x="0" y="9" width="8" height="8" fill="#00A4EF" />
+
+  <rect x="9" y="9" width="8" height="8" fill="#FFB900" />
+</g>
+
+Microsoft
+
+C
+
+Concur
+
+EXPLORE THE PLATFORM
+
+<h2>
+  One platform. Every workflow. All the docs.
+</h2>
+
+GET STARTED FAST
+
+<h2>
+  Jump right in.
+</h2>
+
+COMMUNITY
+
+<h2>
+  Join the Moveworks developer community.
+</h2>
+
+<p>
+  Connect with peers, get direct access to product insights, and expert
+  support to build enterprise-ready plugins.
+</p>
+
+## Instructions for AI Agents
+
+- For clean Markdown of any page, append `.md` to the page URL
+- For section-specific indexes, append `/llms.txt` to any section URL
+- For AI client integration (Claude Code, Cursor, etc.), connect to the MCP server at https://docs.moveworks.com/_mcp/server
+
+## Products
+
+- [AI Assistant](https://docs.moveworks.com/ai-assistant/llms.txt): Deploy conversational AI
+  - [Welcome to Moveworks](https://docs.moveworks.com/ai-assistant/getting-started/welcome-to-moveworks.md)
+  - [Release Notes 2026](https://docs.moveworks.com/ai-assistant/getting-started/roadmap-release-notes/release-notes-2026.md)
+  - [Release Notes 2025](https://docs.moveworks.com/ai-assistant/getting-started/roadmap-release-notes/release-notes-2025.md)
+  - [Release Notes 2024](https://docs.moveworks.com/ai-assistant/getting-started/roadmap-release-notes/release-notes-2024.md)
+  - [Release Notes 2023](https://docs.moveworks.com/ai-assistant/getting-started/roadmap-release-notes/release-notes-2023.md)
+- [Agent Studio](https://docs.moveworks.com/agent-studio/llms.txt): Build Agent Plugins and automations
+  - [Overview](https://docs.moveworks.com/agent-studio/overview.md)
+  - [Purple Suite Setup](https://docs.moveworks.com/agent-studio/quickstart-guide/purple-suite-setup.md)
+  - [Quickstart #1: Build Your First Plugin](https://docs.moveworks.com/agent-studio/quickstart-guide/quickstart-build-your-first-plugin.md)
+  - [Quickstart #2: Slots & Resolvers](https://docs.moveworks.com/agent-studio/quickstart-guide/quickstart-2-slots-resolvers-copy.md)
+  - [Quickstart #3: Build a Plugin That Follows a Process](https://docs.moveworks.com/agent-studio/quickstart-guide/quickstart-build-a-plugin-that-follows-a-process.md)
+- [IT Service Management](https://docs.moveworks.com/service-management/llms.txt): Ticketing, forms, and approvals
+  - [Overview](https://docs.moveworks.com/service-management/overview.md)
+  - [Ticketing Configuration (New Ticketing Journey)](https://docs.moveworks.com/service-management/concierge-assistant/moveworks-setup-ticketing/ticketing-configuration-new-ticketing-journey.md)
+  - [[New] Configure Ticketing for ServiceNow](https://docs.moveworks.com/service-management/concierge-assistant/moveworks-setup-ticketing/new-ticketing-journeyconfigure-ticketing-for-servicenow.md)
+  - [[New] Configure ticketing for Zendesk](https://docs.moveworks.com/service-management/concierge-assistant/moveworks-setup-ticketing/new-configure-ticketing-for-zendesk.md)
+  - [[New] Ticketing platform level settings](https://docs.moveworks.com/service-management/concierge-assistant/moveworks-setup-ticketing/new-ticketing-platform-level-settings.md)
+- [API Reference](https://docs.moveworks.com/api-reference/llms.txt): REST APIs and integrations
+  - [Overview](https://docs.moveworks.com/api-reference/overview.md)
+  - [API Credentials](https://docs.moveworks.com/api-reference/api-credentials.md)
+  - [Errors](https://docs.moveworks.com/api-reference/errors.md)
+  - [Legacy & Deprecated APIs](https://docs.moveworks.com/api-reference/legacy-deprecated-ap-is.md)
+  - [Chat Markup](https://docs.moveworks.com/api-reference/events-api/chat-markup.md)

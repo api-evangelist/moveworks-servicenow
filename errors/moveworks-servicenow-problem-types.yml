@@ -1,0 +1,38 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.moveworks.com/api-reference/errors
+format: custom
+envelope:
+  description: >-
+    Moveworks REST APIs return errors in a stable JSON envelope with a nested
+    `error` object carrying a stable `code` identifier and a human-readable
+    `message`. Error codes are documented as stable and will not change. This is
+    a custom envelope, not RFC 9457 application/problem+json.
+  example: |
+    {
+      "error": {
+        "code": "ERROR_CODE_IDENTIFIER",
+        "message": "Description of the error."
+      }
+    }
+problems:
+- status: 401
+  title: Unauthorized
+  description: Missing or invalid API key / access token in the Authorization header.
+  remediation: Verify the Bearer token and that the credential has not been revoked; OAuth access tokens expire after 60 seconds.
+- status: 410
+  title: Gone
+  description: >-
+    The requested API version has been deprecated and sunset. Deprecated endpoints
+    return 410 Gone after the support window and are removed from the documentation.
+  remediation: Migrate to the current stable version (e.g. Data API v1) per the API versioning policy.
+  source_operation: openapi/moveworks-servicenow-data-api-openapi.yml
+- status: 429
+  title: Too Many Requests
+  description: API requests are rate limited to ensure platform stability.
+  remediation: Back off and retry; contact Moveworks support for rate-limit increases.
+notes: >-
+  The public docs define the error envelope shape and its stability guarantee but
+  do not publish a full enumerated error-code registry; the individual codes are
+  returned in the `error.code` field. Status codes above are derived from the
+  documented auth, versioning (410 Gone on sunset), and rate-limit behavior.

@@ -1,0 +1,22 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.moveworks.com/api-reference/overview
+spec_type: Webhooks
+webhook_surface:
+  documented: true
+  components:
+    - name: Events API
+      description: Moveworks-hosted API for emitting/consuming platform events.
+      docs: https://docs.moveworks.com/api-reference/overview
+    - name: Webhook Listeners
+      description: Moveworks-hosted webhook listener endpoints for receiving inbound events.
+      docs: https://docs.moveworks.com/api-reference/overview
+    - name: Conversations API
+      description: Moveworks-hosted API over conversation events (beta v1beta1 available).
+      docs: https://docs.moveworks.com/api-reference/overview
+notes: >-
+  Moveworks documents an event/webhook surface (Events API, Webhook Listeners,
+  Conversations API) alongside its REST APIs, but does not publish a machine-readable
+  AsyncAPI document. This artifact records the webhook/event surface (type: Webhooks);
+  no AsyncAPI spec is fabricated. Chat Markup for the Events API is documented at
+  docs.moveworks.com/api-reference/events-api/chat-markup.

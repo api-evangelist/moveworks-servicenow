@@ -1,0 +1,7 @@
+generated: '2026-07-20'
+method: generated
+skills:
+- file: moveworks-servicenow-export-conversation-data.md
+  name: Export AI Assistant conversation and interaction data
+  api: openapi/moveworks-servicenow-data-api-openapi.yml
+  operations: [listConversations, listInteractions, listPluginCalls, listPluginResources, listUsers]

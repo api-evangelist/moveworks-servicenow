@@ -1,0 +1,44 @@
+generated: '2026-07-20'
+method: searched
+source: https://help.moveworks.com/docs/api-versioning-policy
+versioning:
+  scheme: uri-path-maturity
+  current: v1
+  maturity_levels:
+    - level: alpha
+      path: /v1alpha1
+      stability: low
+      audience: internal / non-production; may change without notice
+    - level: beta
+      path: /v1beta1
+      stability: medium
+      audience: external / limited production; schema changes possible, 30-90 day deprecation
+    - level: stable
+      path: /v1
+      stability: high
+      audience: production, long-term support; backward-compatible additions only
+  policy: >-
+    Major versions are incremented only for breaking changes; there is no
+    minor/patch versioning. Non-breaking enhancements reuse existing stable
+    endpoints. Progression is alpha -> beta -> stable.
+  docs: https://help.moveworks.com/docs/api-versioning-policy
+deprecation:
+  policy_url: https://help.moveworks.com/docs/api-versioning-policy
+  sunset_header: true
+  notice:
+    alpha: none required
+    beta: minimum 30-day notice
+    stable: minimum 3-month notice, endpoints continue operating during migration
+  on_sunset: Deprecated endpoints return HTTP 410 Gone and are removed from documentation.
+  channels: [community, changelog, email, response headers]
+release_management:
+  docs: https://help.moveworks.com/docs/api-release-management
+status_page: https://status.moveworks.com
+release_notes:
+  - https://docs.moveworks.com/ai-assistant/getting-started/roadmap-release-notes/release-notes-2026.md
+  - https://help.moveworks.com/docs/release-notes-2025
+deprecated_operations: []
+notes: >-
+  Deprecation is communicated via community channels, changelog, email, and HTTP
+  response headers (RFC 8594-style Sunset/Deprecation signaling), with 410 Gone
+  after the support window. Status page verified live (HTTP 200) at status.moveworks.com.

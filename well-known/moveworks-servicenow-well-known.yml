@@ -1,0 +1,24 @@
+generated: '2026-07-20'
+method: probed
+source: live probe 2026-07-20
+hosts:
+- host: https://api.moveworks.ai
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+- host: https://www.moveworks.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+notes: >-
+  No /.well-known discovery documents are published on the API host
+  (api.moveworks.ai) or the marketing host (www.moveworks.com) as of the probe
+  date. Absence is recorded data, not an error. Note the OAuth token endpoint and
+  API credentials are managed through the authenticated Moveworks dashboard rather
+  than an RFC 8414 authorization-server metadata document.

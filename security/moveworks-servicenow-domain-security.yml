@@ -1,0 +1,44 @@
+generated: '2026-07-20'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: www.moveworks.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Nov 11 23:59:59 2026 GMT
+  hsts: true
+  hsts_max_age: 31557600
+- host: api.moveworks.ai
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct  2 23:59:59 2026 GMT
+  hsts: null
+- host: api.am-eu-central.moveworks.ai
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Dec 30 23:59:59 2026 GMT
+  hsts: null
+domains:
+- domain: moveworks.com
+  dnssec: false
+  caa:
+  - 0 issue "pki.goog"
+  - 0 issue "sectigo.com"
+  - 0 issuewild "amazon.com"
+  - 0 issuewild "cloudflare.com"
+  - 0 issuewild "digicert.com"
+  - 0 issuewild "letsencrypt.org"
+  spf: true
+  dmarc: true
+  dmarc_policy: quarantine
+- domain: moveworks.ai
+  dnssec: false
+  caa:
+  - 0 issuewild "amazon.com"
+  - 0 issuewild "letsencrypt.org"
+  - 0 iodef "mailto:caadns@moveworks.ai"
+  - 0 issue "amazon.com"
+  - 0 issue "letsencrypt.org"
+  spf: false
+  dmarc: true
+  dmarc_policy: quarantine

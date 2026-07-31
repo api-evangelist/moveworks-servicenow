@@ -1,0 +1,34 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.moveworks.com/api-reference/overview
+standards:
+- id: oauth2
+  conforms: true
+  evidence: OAuth 2.0 client-credentials grant offered for API credentials (docs.moveworks.com/api-reference/api-credentials).
+- id: bearer-token-auth
+  conforms: true
+  evidence: All REST APIs use Authorization Bearer token auth.
+- id: odata
+  conforms: true
+  evidence: Data API responses use OData JSON envelope (odata.context, odata.nextlink, value, $count).
+- id: rfc8594-sunset
+  conforms: true
+  evidence: Deprecation communicated via response headers; sunset endpoints return 410 Gone (api versioning policy).
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: 'Errors use a custom { error: { code, message } } envelope, not application/problem+json.'
+- id: soc2-type2
+  conforms: true
+  evidence: SOC 2 Type 2 compliance (moveworks.com/us/en/resources/blog/moveworks-soc-2-type-2-compliance).
+- id: iso-27001
+  conforms: true
+  evidence: ISO 27001 certified (moveworks.com/us/en/resources/blog/moveworks-iso-27001-certification).
+- id: hipaa
+  conforms: true
+  evidence: HIPAA compliance listed on the security platform page.
+- id: gdpr
+  conforms: true
+  evidence: GDPR compliance listed on the security platform page.
+- id: fedramp
+  conforms: true
+  evidence: FedRAMP compliance listed on the security platform page; GovCloud host api.moveworksgov.ai.
