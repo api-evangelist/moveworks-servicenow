@@ -62,6 +62,8 @@ apis:
   - type: Documentation
     url: https://docs.moveworks.com/api-reference/overview
 common:
+- type: Overlay
+  url: overlays/moveworks-servicenow-data-api-overlay.yaml
 - type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/moveworks-servicenow/overview
 # --- Developer surface / link properties ---
