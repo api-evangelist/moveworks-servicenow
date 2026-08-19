@@ -1,0 +1,149 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Moveworks Data Records API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Records",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List conversation records",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.moveworks.ai/export/v1/records/conversations",
+            "params": [
+              {
+                "name": "$count",
+                "value": "",
+                "type": "query",
+                "description": "When true, include the total record count in the response."
+              },
+              {
+                "name": "@odata.nextLink",
+                "value": "",
+                "type": "query",
+                "description": "Opaque cursor returned by a previous page for server-driven pagination."
+              }
+            ]
+          },
+          "docs": "Returns top-level interaction groupings (conversations) between users and the AI Assistant."
+        },
+        {
+          "info": {
+            "name": "List interaction records",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.moveworks.ai/export/v1/records/interactions",
+            "params": [
+              {
+                "name": "$count",
+                "value": "",
+                "type": "query",
+                "description": "When true, include the total record count in the response."
+              },
+              {
+                "name": "@odata.nextLink",
+                "value": "",
+                "type": "query",
+                "description": "Opaque cursor returned by a previous page for server-driven pagination."
+              }
+            ]
+          },
+          "docs": "Returns individual user and AI Assistant exchanges within conversations."
+        },
+        {
+          "info": {
+            "name": "List plugin call records",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.moveworks.ai/export/v1/records/plugin-calls",
+            "params": [
+              {
+                "name": "$count",
+                "value": "",
+                "type": "query",
+                "description": "When true, include the total record count in the response."
+              },
+              {
+                "name": "@odata.nextLink",
+                "value": "",
+                "type": "query",
+                "description": "Opaque cursor returned by a previous page for server-driven pagination."
+              }
+            ]
+          },
+          "docs": "Returns plugin invocation records produced while resolving interactions."
+        },
+        {
+          "info": {
+            "name": "List plugin resource records",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.moveworks.ai/export/v1/records/plugin-resources",
+            "params": [
+              {
+                "name": "$count",
+                "value": "",
+                "type": "query",
+                "description": "When true, include the total record count in the response."
+              },
+              {
+                "name": "@odata.nextLink",
+                "value": "",
+                "type": "query",
+                "description": "Opaque cursor returned by a previous page for server-driven pagination."
+              }
+            ]
+          },
+          "docs": "Returns the resources used by plugins during interactions."
+        },
+        {
+          "info": {
+            "name": "List user records",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.moveworks.ai/export/v1/records/users",
+            "params": [
+              {
+                "name": "$count",
+                "value": "",
+                "type": "query",
+                "description": "When true, include the total record count in the response."
+              },
+              {
+                "name": "@odata.nextLink",
+                "value": "",
+                "type": "query",
+                "description": "Opaque cursor returned by a previous page for server-driven pagination."
+              }
+            ]
+          },
+          "docs": "Returns the ingested user roster data referenced by interactions."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
