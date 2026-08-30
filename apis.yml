@@ -48,7 +48,7 @@ created: '2026-07-17'
 modified: '2026-07-20'
 tags:
 - Company
-- AI Infrastructure
+- Ai Infrastructure
 - AI Assistant
 - Agentic AI
 - Enterprise Automation
@@ -83,6 +83,11 @@ apis:
   - type: Documentation
     url: https://docs.moveworks.com/api-reference/overview
 common:
+- type: ParentCompany
+  url: https://apis.io/providers/servicenow/
+  name: ServiceNow
+  x-relationship: acquired
+  x-evidence: "Moveworks is an enterprise AI assistant / agentic automation platform (acquired by ServiceNow) that lets employees resolve IT, HR, and other requests in natural language across Slack, Microsoft Teams, and 100+ enterprise systems."
 - type: Overlay
   url: overlays/moveworks-servicenow-data-api-overlay.yaml
 - type: PostmanWorkspace
