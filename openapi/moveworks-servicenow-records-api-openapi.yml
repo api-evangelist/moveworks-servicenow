@@ -1,4 +1,4 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
   title: Moveworks Data Records API
   version: v1
@@ -128,13 +128,6 @@ paths:
           $ref: '#/components/responses/Gone'
 components:
   parameters:
-    nextLink:
-      name: '@odata.nextLink'
-      in: query
-      required: false
-      description: Opaque cursor returned by a previous page for server-driven pagination.
-      schema:
-        type: string
     count:
       name: $count
       in: query
@@ -142,6 +135,26 @@ components:
       description: When true, include the total record count in the response.
       schema:
         type: boolean
+    nextLink:
+      name: '@odata.nextLink'
+      in: query
+      required: false
+      description: Opaque cursor returned by a previous page for server-driven pagination.
+      schema:
+        type: string
+  responses:
+    Gone:
+      description: The requested API version has been deprecated and sunset (RFC-style 410 Gone).
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    Unauthorized:
+      description: Missing or invalid credentials.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
   schemas:
     RecordCollection:
       type: object
@@ -171,19 +184,6 @@ components:
             message:
               type: string
               description: Human-readable error description.
-  responses:
-    Gone:
-      description: The requested API version has been deprecated and sunset (RFC-style 410 Gone).
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/Error'
-    Unauthorized:
-      description: Missing or invalid credentials.
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/Error'
   securitySchemes:
     bearerAuth:
       type: http
