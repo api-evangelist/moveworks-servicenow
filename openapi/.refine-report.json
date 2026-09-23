@@ -1,7 +1,7 @@
 {
   "provider": "moveworks-servicenow",
   "sources": [
-    "moveworks-servicenow-records-api-openapi.yml"
+    "_original/moveworks-servicenow-data-api-openapi.yml"
   ],
   "outputs": [
     "moveworks-servicenow-records-api-openapi.yml"
@@ -10,8 +10,11 @@
   "errors": [],
   "warnings": [],
   "notes": [
-    "moveworks-servicenow-records-api-openapi.yml: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "moveworks-servicenow-data-api-openapi.yml: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
     "apis.yml register: already-registered"
   ],
-  "skipped": []
+  "skipped": [
+    "moveworks-servicenow-records-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

@@ -127,35 +127,20 @@ paths:
         '410':
           $ref: '#/components/responses/Gone'
 components:
-  parameters:
-    count:
-      name: $count
-      in: query
-      required: false
-      description: When true, include the total record count in the response.
-      schema:
-        type: boolean
-    nextLink:
-      name: '@odata.nextLink'
-      in: query
-      required: false
-      description: Opaque cursor returned by a previous page for server-driven pagination.
-      schema:
-        type: string
-  responses:
-    Gone:
-      description: The requested API version has been deprecated and sunset (RFC-style 410 Gone).
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/Error'
-    Unauthorized:
-      description: Missing or invalid credentials.
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/Error'
   schemas:
+    Error:
+      type: object
+      description: Standard Moveworks error envelope.
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+              description: Stable error code identifier.
+            message:
+              type: string
+              description: Human-readable error description.
     RecordCollection:
       type: object
       description: OData JSON collection envelope.
@@ -171,19 +156,34 @@ components:
           items:
             type: object
             additionalProperties: true
-    Error:
-      type: object
-      description: Standard Moveworks error envelope.
-      properties:
-        error:
-          type: object
-          properties:
-            code:
-              type: string
-              description: Stable error code identifier.
-            message:
-              type: string
-              description: Human-readable error description.
+  parameters:
+    nextLink:
+      name: '@odata.nextLink'
+      in: query
+      required: false
+      description: Opaque cursor returned by a previous page for server-driven pagination.
+      schema:
+        type: string
+    count:
+      name: $count
+      in: query
+      required: false
+      description: When true, include the total record count in the response.
+      schema:
+        type: boolean
+  responses:
+    Gone:
+      description: The requested API version has been deprecated and sunset (RFC-style 410 Gone).
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    Unauthorized:
+      description: Missing or invalid credentials.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
   securitySchemes:
     bearerAuth:
       type: http
